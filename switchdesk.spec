@@ -9,8 +9,6 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	textutils
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %define		kdeprefix	%{_prefix}
 
