@@ -22,7 +22,7 @@ setting a "global default."
 %description -l pl
 Desktop Switcher to narzêdzie pozwalaj±ce u¿ytkownikom ³atwo
 prze³±czaæ siê miêdzy ró¿nymi ¶rodowiskami desktopowymi, które s±
-zainstalowane. Narzêdzie ma wsparcie dl GNOME, KDE i AnotherLevel.
+zainstalowane. Narzêdzie ma wsparcie dla GNOME, KDE i AnotherLevel.
 Wsprarcie dla innych ¶rodowisk jest mo¿liwe, podobnie jak ustawienie
 globalnego domy¶lnego ¶rodowiska.
 
