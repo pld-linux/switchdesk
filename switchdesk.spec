@@ -1,19 +1,20 @@
+Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel
+Summary(pl):	Prze³±cznik desktopów - prze³±cza pomiêdzy GNOME, KDE i AnotherLevel
 Name:		switchdesk
-Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel.
 Version:	1.7.0
 Release:	1
-Source0:	%{name}-%{version}.tar.gz
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
+Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	textutils
 
-%define		kdeprefix	/usr
-
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+
+%define		kdeprefix	%{_prefix}
 
 %description
 The Desktop Switcher is a tool which enables users to easily switch
@@ -22,28 +23,47 @@ tool includes support for GNOME, KDE, and AnotherLevel. Support for
 different environments on different computers is available, as well as
 setting a "global default."
 
+%description -l pl
+Desktop Switcher to narzêdzie pozwalaj±ce u¿ytkownikom ³atwo
+prze³±czaæ siê miêdzy ró¿nymi ¶rodowiskami desktopowymi, które s±
+zainstalowane. Narzêdzie ma wsparcie dl GNOME, KDE i AnotherLevel.
+Wsprarcie dla innych ¶rodowisk jest mo¿liwe, podobnie jak ustawienie
+globalnego domy¶lnego ¶rodowiska.
+
 %package kde
-Group:		X11/KDE
-Group(de):	X11/KDE
-Group(pl):	X11/KDE
-Summary:	KDE interface to the Desktop Switcher.
+Summary:	KDE interface to the Desktop Switcher
+Summary(pl):	Interfejs KDE do Desktop Switchera
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
+Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Requires:	qt >= 1.42 kdesupport
 
 %description kde
 Provides the desktop switching Tool with a KDE look and feel.
 
+%description kde -l pl
+Pakiet zawiera narzêdzie do prze³±czania desktopów z wygl±dem KDE.
+
 %package gnome
+Summary:	GNOME interface to the Desktop Switcher
+Summary(pl):	Interfejs GNOME do Desktop Switchera
 Group:		X11/Applications
 Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
-Summary:	GNOME interface to the Desktop Switcher.
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 
 %description gnome
 Provides the desktop switching tool with a GNOME look and feel.
 
-%prep
-rm -rf $RPM_BUILD_ROOT
+%description gnome -l pl
+Pakiet zawiera narzêdzie do prze³±czania desktopów z wygl±dem GNOME.
 
+%prep
 %setup -q -n %{name}-%{version}
 
 %build
