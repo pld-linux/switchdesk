@@ -5,8 +5,6 @@ Version:	1.7.0
 Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	textutils
@@ -34,11 +32,6 @@ globalnego domy¶lnego ¶rodowiska.
 Summary:	KDE interface to the Desktop Switcher
 Summary(pl):	Interfejs KDE do Desktop Switchera
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Requires:	qt >= 1.42 kdesupport
 
 %description kde
@@ -51,11 +44,6 @@ Pakiet zawiera narzêdzie do prze³±czania desktopów z wygl±dem KDE.
 Summary:	GNOME interface to the Desktop Switcher
 Summary(pl):	Interfejs GNOME do Desktop Switchera
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 
 %description gnome
 Provides the desktop switching tool with a GNOME look and feel.
