@@ -10,7 +10,6 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	textutils
 
-
 %define		kdeprefix	%{_prefix}
 
 %description
@@ -51,7 +50,7 @@ Provides the desktop switching tool with a GNOME look and feel.
 Pakiet zawiera narzêdzie do prze³±czania desktopów z wygl±dem GNOME.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 KDEDIR=%{kdeprefix} ; export KDEDIR
