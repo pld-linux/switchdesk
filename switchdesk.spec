@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %files 
 /usr/bin/switchdesk
 /usr/bin/switchdesk-helper
-#/etc/X11/applnk/System/switchdesk.desktop
+#/usr/X11R6/share/applnk/System/switchdesk.desktop
 /usr/share/applnk/System/switchdesk.kdelnk
 /usr/share/apps/switchdesk
 
