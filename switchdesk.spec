@@ -7,7 +7,7 @@ Version: 1.7.0
 Release: 1
 Source: %{kdename}-%{version}.tar.gz
 Copyright: GPL
-Group: User Interface/Desktops
+Group: X11/Window Managers/Tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires: textutils
 Prefix: %{kdeprefix}
@@ -19,7 +19,7 @@ support for GNOME, KDE, and AnotherLevel.  Support for different environments
 on different computers is available, as well as setting a "global default."
 
 %package kde
-Group: User Interface/Desktops
+Group: X11/KDE
 Summary: KDE interface to the Desktop Switcher.
 Requires: %{qtver} kdesupport
 
@@ -27,7 +27,7 @@ Requires: %{qtver} kdesupport
 Provides the desktop switching Tool with a KDE look and feel.
 
 %package gnome
-Group: User Interface/Desktops
+Group: X11/GNOME
 Summary: GNOME interface to the Desktop Switcher.
 
 %description gnome
