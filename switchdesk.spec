@@ -40,16 +40,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %build
 export KDEDIR=%{kdeprefix}
-make -f Makefile.cvs
+%{__make} -f Makefile.cvs
 ./configure \
 	--prefix=%{kdeprefix} \
 	--with-install-root=$RPM_BUILD_ROOT \
 	--disable-path-check
-make CXXFLAGS="$RPM_OPT_FLAGS" KDEDIR=%{kdeprefix}
+%{__make} CXXFLAGS="$RPM_OPT_FLAGS" KDEDIR=%{kdeprefix}
 
 %install
 export KDEDIR=%{kdeprefix}
-make install-strip prefix=$RPM_BUILD_ROOT%{kdeprefix}
+%{__make} install-strip prefix=$RPM_BUILD_ROOT%{kdeprefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
