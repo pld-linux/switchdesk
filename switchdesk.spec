@@ -71,7 +71,7 @@ KDEDIR=%{kdeprefix} ; export KDEDIR
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/switchdesk
 %attr(755,root,root) %{_bindir}/switchdesk-helper
