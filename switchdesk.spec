@@ -8,7 +8,7 @@ Release: 1
 Source: %{kdename}-%{version}.tar.gz
 Copyright: GPL
 Group: User Interface/Desktops
-Buildroot: /var/tmp/%{kdename}-buildroot
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires: textutils
 Prefix: %{kdeprefix}
 
