@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	0efc2e0ca297ed6d42b52a3a8385c0c2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	textutils
 
