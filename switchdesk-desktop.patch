@@ -1,0 +1,16 @@
+diff -urN switchdesk-4.0.8-6/switchdesk.desktop.in switchdesk-4.0.8-6.new/switchdesk.desktop.in
+--- switchdesk-4.0.8-6/switchdesk.desktop.in	2004-02-15 12:49:14.000000000 +0100
++++ switchdesk-4.0.8-6.new/switchdesk.desktop.in	2006-09-17 12:42:13.000000000 +0200
+@@ -1,10 +1,10 @@
+ [Desktop Entry]
+ X-Desktop-File-Install-Version=0.2
+-Categories=Application;Settings;X-Red-Hat-Extra;
++Categories=GTK;Settings;DesktopSettings;
+ Encoding=UTF-8
+ _Name=Desktop Switching Tool
+ _Comment=Switches between different desktop environments or window managers
+-Terminal=0
++Terminal=false
+ Exec=switchdesk
+ Icon=switchdesk.png
+ Type=Application
