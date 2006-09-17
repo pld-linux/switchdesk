@@ -1,0 +1,70 @@
+diff -urN switchdesk-4.0.8-6/switchdesk-helper switchdesk-4.0.8-6.new/switchdesk-helper
+--- switchdesk-4.0.8-6/switchdesk-helper	2006-01-25 17:19:29.000000000 +0100
++++ switchdesk-4.0.8-6.new/switchdesk-helper	2006-09-17 14:02:42.000000000 +0200
+@@ -4,8 +4,7 @@
+ # (c) 1999-2004 Red Hat, Inc.
+ 
+ NotFound() {
+-	echo "ERROR: $1 is not installed on your machine! to install $1, please type"
+-	echo "yum $2 \"$3\""
++	echo "ERROR: $1 is not installed on your machine!"
+ 	exit 1
+ }
+ 
+@@ -42,47 +41,47 @@
+ DESKTOP=`echo $1 |tr a-z A-Z`
+ case $DESKTOP in
+     KDE|KDE2)
+-        [ ! -x /usr/bin/startkde ] && NotFound KDE groupinstall "KDE Software Development"
++        [ ! -x /usr/bin/startkde ] && NotFound KDE
+         DNAME="KDE"
+         NEW_XCLIENTS="$DATADIR/Xclients.kde"
+         ;;
+     GNOME)
+-        [ ! -x /usr/bin/gnome-session ] && NotFound GNOME groupinstall "GNOME Desktop Environment"
++        [ ! -x /usr/bin/gnome-session ] && NotFound GNOME
+         DNAME="GNOME"
+         NEW_XCLIENTS="$DATADIR/Xclients.gnome"
+         ;;
+     ENLIGHTENMENT|E)
+-        [ ! -x /usr/bin/enlightenment ] && NotFound Enlightenment install enlightenment
++        [ ! -x /usr/bin/enlightenment ] && NotFound Enlightenment
+         DNAME="Enlightenment"
+         NEW_XCLIENTS="$DATADIR/Xclients.enlightenment"
+         ;;
+     FVWM)
+-        [ ! -x /usr/X11R6/bin/fvwm2 -a ! -x /usr/bin/fvwm2 ] && NotFound FVWM install fvwm
++        [ ! -x /usr/X11R6/bin/fvwm2 -a ! -x /usr/bin/fvwm2 ] && NotFound FVWM
+         DNAME="fvwm"
+         NEW_XCLIENTS="$DATADIR/Xclients.fvwm"
+         ;;
+     WINDOWMAKER|WMAKER)
+-        [ ! -x /usr/bin/wmaker ] && NotFound WindowMaker install WindowMaker
++        [ ! -x /usr/bin/wmaker ] && NotFound WindowMaker
+         DNAME="WindowMaker"
+         NEW_XCLIENTS="$DATADIR/Xclients.wmaker"
+         ;;
+     TWM)
+-        [ ! -x /usr/X11R6/bin/twm -a ! -x /usr/bin/twm ] && NotFound TWM install xorg-x11-twm
++        [ ! -x /usr/X11R6/bin/twm -a ! -x /usr/bin/twm ] && NotFound TWM
+         DNAME="twm"
+         NEW_XCLIENTS="$DATADIR/Xclients.twm"
+         ;;
+     XFCE)
+-        [ ! -x /usr/bin/startxfce4 ] && NotFound XFCE groupinstall XFCE
++        [ ! -x /usr/bin/startxfce4 ] && NotFound XFCE
+         DNAME="xfce"
+         NEW_XCLIENTS="$DATADIR/Xclients.xfce"
+         ;;
+     FLUXBOX)
+-        [ ! -x /usr/X11R6/bin/fluxbox -a ! -x /usr/bin/fluxbox ] && NotFound FLUXBOX install fluxbox
++        [ ! -x /usr/X11R6/bin/fluxbox -a ! -x /usr/bin/fluxbox ] && NotFound FLUXBOX
+         DNAME="fluxbox"
+         NEW_XCLIENTS="$DATADIR/Xclients.fluxbox"
+         ;;
+     ICEWM)
+-        [ ! -x /usr/bin/icewm ] && NotFound ICEWM install icewm
++        [ ! -x /usr/bin/icewm ] && NotFound ICEWM
+         DNAME="icewm"
+         NEW_XCLIENTS="$DATADIR/Xclients.icewm"
+         ;;
