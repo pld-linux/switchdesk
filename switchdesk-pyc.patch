@@ -1,0 +1,14 @@
+diff -urN switchdesk-4.0.8-6/switchdesk switchdesk-4.0.8-6.new/switchdesk
+--- switchdesk-4.0.8-6/switchdesk	2004-02-15 12:59:38.000000000 +0100
++++ switchdesk-4.0.8-6.new/switchdesk	2006-09-17 13:52:08.000000000 +0200
+@@ -5,8 +5,8 @@
+ echo "Redistributable under the terms of the GNU General Public License"
+ 
+ if [ -n "$DISPLAY" -a -z "$1" ] ; then
+-	if [ -x /usr/share/switchdesk/switchdesk-gui.py ] ; then
+-		exec /usr/share/switchdesk/switchdesk-gui.py
++	if [ -f /usr/share/switchdesk/switchdesk-gui.pyc ] ; then
++		/usr/bin/env python /usr/share/switchdesk/switchdesk-gui.pyc
+ 	else
+ 		echo "Desktop Switcher GUI is unavailable."
+ 		echo "Please install the switchdesk-gui package or use"
