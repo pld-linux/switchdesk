@@ -2,7 +2,7 @@ Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel
 Summary(pl):	Prze³±cznik desktopów - prze³±cza pomiêdzy GNOME, KDE i AnotherLevel
 Name:		switchdesk
 Version:	4.0.8
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	%{name}-%{version}-6.tar.bz2
@@ -57,9 +57,12 @@ Pakiet zawiera graficzny interfejs do Desktop Switchera.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp $RPM_BUILD_ROOT%{_switchdeskdir}/pixmaps/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 rm -f $RPM_BUILD_ROOT%{_switchdeskdir}/*.py
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
@@ -84,3 +87,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_switchdeskdir}/*.pyc
 %{_switchdeskdir}/*.glade
 %{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
