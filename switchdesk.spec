@@ -1,5 +1,5 @@
 Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel
-Summary(pl.UTF-8):   Przełącznik desktopów - przełącza pomiędzy GNOME, KDE i AnotherLevel
+Summary(pl.UTF-8):	Przełącznik desktopów - przełącza pomiędzy GNOME, KDE i AnotherLevel
 Name:		switchdesk
 Version:	4.0.8
 Release:	1
@@ -32,7 +32,7 @@ globalnego domyślnego środowiska.
 
 %package gui
 Summary:	Graphical interface to the Desktop Switcher
-Summary(pl.UTF-8):   Graficzny interfejs do Desktop Switchera
+Summary(pl.UTF-8):	Graficzny interfejs do Desktop Switchera
 Group:		X11/Applications
 Requires:	switchdesk >= %{version}-%{release}
 Provides:	switchdesk-gnome
