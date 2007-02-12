@@ -1,5 +1,5 @@
 Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel
-Summary(pl):	Prze³±cznik desktopów - prze³±cza pomiêdzy GNOME, KDE i AnotherLevel
+Summary(pl.UTF-8):   PrzeÅ‚Ä…cznik desktopÃ³w - przeÅ‚Ä…cza pomiÄ™dzy GNOME, KDE i AnotherLevel
 Name:		switchdesk
 Version:	4.0.8
 Release:	1
@@ -23,16 +23,16 @@ tool includes support for GNOME, KDE, Xfce4 and others. Support for
 different environments on different computers is available, as well as
 setting a "global default."
 
-%description -l pl
-Desktop Switcher to narzêdzie pozwalaj±ce u¿ytkownikom ³atwo
-prze³±czaæ siê miêdzy ró¿nymi ¶rodowiskami desktopowymi, które s±
-zainstalowane. Narzêdzie ma wsparcie dla GNOME, KDE, Xfce4 i innych.
-Wsprarcie dla innych ¶rodowisk jest mo¿liwe, podobnie jak ustawienie
-globalnego domy¶lnego ¶rodowiska.
+%description -l pl.UTF-8
+Desktop Switcher to narzÄ™dzie pozwalajÄ…ce uÅ¼ytkownikom Å‚atwo
+przeÅ‚Ä…czaÄ‡ siÄ™ miÄ™dzy rÃ³Å¼nymi Å›rodowiskami desktopowymi, ktÃ³re sÄ…
+zainstalowane. NarzÄ™dzie ma wsparcie dla GNOME, KDE, Xfce4 i innych.
+Wsprarcie dla innych Å›rodowisk jest moÅ¼liwe, podobnie jak ustawienie
+globalnego domyÅ›lnego Å›rodowiska.
 
 %package gui
 Summary:	Graphical interface to the Desktop Switcher
-Summary(pl):	Graficzny interfejs do Desktop Switchera
+Summary(pl.UTF-8):   Graficzny interfejs do Desktop Switchera
 Group:		X11/Applications
 Requires:	switchdesk >= %{version}-%{release}
 Provides:	switchdesk-gnome
@@ -43,7 +43,7 @@ Obsoletes:	switchdesk-kde
 %description gui
 Provides the graphical user interface to the Desktop Switcher.
 
-%description gui -l pl
+%description gui -l pl.UTF-8
 Pakiet zawiera graficzny interfejs do Desktop Switchera.
 
 %prep
