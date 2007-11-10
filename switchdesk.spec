@@ -2,7 +2,7 @@ Summary:	Desktop Switcher - switch between GNOME, KDE and AnotherLevel
 Summary(pl.UTF-8):	Przełącznik desktopów - przełącza pomiędzy GNOME, KDE i AnotherLevel
 Name:		switchdesk
 Version:	4.0.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	%{name}-%{version}-6.tar.bz2
@@ -12,6 +12,8 @@ Patch1:		%{name}-pyc.patch
 Patch2:		%{name}-PLD.patch
 BuildRequires:	intltool
 BuildRequires:	python-pygtk-glade
+# sr@Latn vs. sr@latin
+Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_switchdeskdir	%{_datadir}/switchdesk
@@ -51,6 +53,8 @@ Pakiet zawiera graficzny interfejs do Desktop Switchera.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+
+mv po/sr\@{Latn,latin}.po
 
 %build
 %{__make}
